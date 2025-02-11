@@ -1,0 +1,274 @@
+/* Fonts - Poppins, Praise */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Praise&display=swap');
+
+/* Varibles */
+:root {
+    --Golden-Gradiant: linear-gradient(145deg, rgba(238,201,136,1) 0%, rgba(204,171,114,1) 25%, rgba(184,161,122,1) 50%, rgba(129,106,65,1) 75%, rgba(88,70,39,1) 100%);
+    --Solid-Gold: #EEC988;
+    --Gray-Dark: #202020;
+    --Gray-Light: #282828;
+    --inactive: rgb(127, 127, 127);
+    --win-color: #526F2B;
+    --lose-color: #703737;
+}
+
+/* Body Settings*/
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 25px 0 0 0;
+    background-color: #1E1E1E;
+    font-family: 'poppins';
+}
+
+/* Full Container */
+.container {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 23px;
+    left: 50%;
+    translate: -50%;
+    background-color: var(--Gray-Light);
+    border-radius: 6px;
+    box-shadow: 0 0 5px 5px rgb(27, 27, 27);
+    height: 210px; /* 210 - 844 */
+    width: 390px;
+    overflow: hidden;
+}
+
+/* Logo */
+.logo {
+    text-align: center;
+}
+
+.logo h1 {
+    margin: 23px 0 0 0;
+    font-family: 'praise';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 4rem;
+    line-height: 65px;
+    width: 300px;
+}
+
+.logo p {
+    margin: 0;
+    font-size: 0.7rem;
+    font-weight: 200;
+    color: #F9EBD2;
+    user-select: none;
+}
+
+/* Start button */
+.start-btn {
+    background-color: var(--Gray-Dark);
+    font-size: 1.25rem;
+    height: 60px;
+    width: 230px;
+    z-index: 1;
+
+    /* display: none; */
+}
+
+/* Game Layout */
+.game-layout {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 23px;
+    top: 135px;
+    width: 100%;
+    opacity: 0;
+    
+}
+
+/* Level container */
+.score-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Gray-Dark);
+    height: 46px;
+    width: 100%;
+}
+
+.score-container p {
+    font-size: 1.25rem;
+    color: var(--Solid-Gold);
+    user-select: none;
+}
+
+/* Game container */
+.game-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Gray-Dark);
+    height: 390px;
+    width: 100%;
+}
+
+/* progress bar */
+.game-container .progress-bar {
+    position: absolute;
+    top: 66px;
+    left: 0;
+    height: 3px;
+    background-color: var(--Solid-Gold);
+
+    /* width: 75%; */
+}
+
+/* Game container - Game */
+.game-container .block-game {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    height: 344px;
+    width: 344px;
+
+    opacity: 0;
+    display: none;
+}
+
+.game-container .block-game .block-style {
+    background-color: var(--Gray-Light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    font-size: 1.5rem;
+    height: 54px;
+    width: 54px;
+
+    content: "";
+}
+
+/* Game container - Win screen */
+.game-container .block-win {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+
+    opacity: 0;
+    display: none;
+    border: solid 2px var(--win-color);
+}
+
+.game-container .block-win h1 {
+    margin: 0 0 10px 0;
+    font-family: 'praise';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 4rem;
+    width: 200px;
+}
+
+.game-container .block-win .next-btn {
+    background-color: var(--Gray-Light);
+    font-size: 1.25rem;
+    height: 60px;
+    width: 230px;
+}
+
+/* Game container - Lose screen */
+.game-container .block-lose {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+
+    opacity: 0;
+    display: none;
+    border: solid 2px var(--lose-color);
+}
+
+.game-container .block-lose h1 {
+    margin: 0;
+    font-family: 'praise';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 4rem;
+    width: 200px;
+}
+
+.game-container .block-lose p {
+    margin: 0;
+    color: white;
+    font-style: italic;
+    width: 230px;
+}
+
+.game-container .block-lose .tryagain-btn {
+    background-color: var(--Gray-Light);
+    font-size: 1.25rem;
+    height: 60px;
+    width: 230px;
+}
+
+/* Botton container */
+.btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Gray-Dark);;
+    height: 100px;
+    width: 100%;
+}
+
+.btn-container .confirm-btn {
+    background-color: var(--Gray-Light);
+    font-size: 1.25rem;
+    height: 60px;
+    width: 344px;
+}
+
+/* Extras */
+.golden-text {
+    background: var(--Golden-Gradiant);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    user-select: none;
+}
+
+.btn-style {
+    color: var(--Solid-Gold);
+    border: 0;
+    border-radius: 6px;
+    color: var(--Solid-Gold);
+    cursor: pointer;
+    user-select: none;
+}
+
+.btn-non-selectable {
+    pointer-events: none;
+    color: var(--inactive);
+}
+
+/* Effects (Hover - Active) */
+.btn-style:hover {
+    box-sizing: border-box;
+    border: solid 2px var(--Solid-Gold);
+}
+
+.btn-style-active,
+.btn-style:active {
+    background: var(--Golden-Gradiant);
+    color: var(--Gray-Light);
+    border: 0;
+    user-select: none;
+}

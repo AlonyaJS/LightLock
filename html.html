@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="script.js"></script>
+    <title>LightLock</title>
+</head>
+<body>
+    <div class="container" id="container">
+
+        <div class="logo">
+            <h1 class="golden-text">LightLock</h1>
+            <p>Can you unlock the right sequence?</p>
+        </div>
+
+        <button class="start-btn btn-style" id="start-btn">Start Game</button>
+        
+        <div class="game-layout" id="game-layout">
+
+            <div class="score-container">
+                <p id="score"></p>
+            </div>
+
+            <div class="game-container">
+
+                <div class="progress-bar" id="progress"></div>
+
+                <div class="block-game" id="block-game"></div>
+
+                <div class="block-win" id="block-win">
+                    <h1 class="golden-text">Correct!</h1>
+                    <button class="next-btn btn-style" id="next-btn">Next Stage</button>
+                </div>
+
+                <div class="block-lose" id="block-lose">
+                    <h1 class="golden-text">Wrong!</h1>
+                    <p id="lose-text">"If forgetting was a sport, you'd be a champion!"</p>
+                    <button class="tryagain-btn btn-style" id="tryagain-btn">Try Again!</button>
+                </div>
+
+            </div>
+
+            <div class="btn-container">
+                <button class="confirm-btn btn-style btn-non-selectable" id="confirm-btn">Light Locked</button>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
