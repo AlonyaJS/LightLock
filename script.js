@@ -14,7 +14,7 @@ $(document).ready(function () {
 
     // Game Rules
     let progressTimer = 4; // How Long the blocks will be lighted up
-    let AmountOfBlocks = 10; // How many blocks to be displayed
+    let AmountOfBlocks = 6; // How many blocks to be displayed
     const DisplayBlockNumbers = false // Should blocks have numbers in them?
     
 
@@ -183,5 +183,15 @@ $(document).ready(function () {
 
         return text[Math.floor(Math.random() * text.length)];;
     };
+
+    // debug
+    $("#debugs").click( () => { 
+        
+        progressTimer = $("#debugtimer").val();
+        AmountOfBlocks = $("#debugaob").val();
+        DisplayBlockNumbers = $("#debugdn").prop("checked")
+
+        console.log(progressTimer, AmountOfBlocks, DisplayBlockNumbers)
+    });
 
 });
