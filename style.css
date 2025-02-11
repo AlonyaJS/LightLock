@@ -272,3 +272,20 @@ body {
     border: 0;
     user-select: none;
 }
+
+/* Debug */
+.debug-wrap {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    padding: 20px;
+}
+
+.debug-wrap input {
+    width: 30px;
+}
+
+.debug-wrap button {
+    margin-top: 20px;
+}
