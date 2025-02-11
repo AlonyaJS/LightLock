@@ -15,7 +15,7 @@ $(document).ready(function () {
     // Game Rules
     let progressTimer = 4; // How Long the blocks will be lighted up
     let AmountOfBlocks = 6; // How many blocks to be displayed
-    const DisplayBlockNumbers = false // Should blocks have numbers in them?
+    let DisplayBlockNumbers = false // Should blocks have numbers in them?
     
 
     // Start Game button - click Event
